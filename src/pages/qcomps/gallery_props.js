@@ -53,3 +53,5 @@ export default function Gallery() {
     </div>
   );
 }
+
+// generalize them in one section
