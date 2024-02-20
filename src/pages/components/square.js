@@ -8,7 +8,7 @@ function Square({children}) {
 }
 
 export default function Holder() {
-  return (
+  return ( // generate different kinds of css
     <div>
       <Square>
         <img

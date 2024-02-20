@@ -1,4 +1,5 @@
-function Avatar({person, size=100}) {
+// make this function more reusable
+function Avatar({person, size=100}) { // only one parameter, within a {} with two property
   return (
     <img
       className="avatar"
