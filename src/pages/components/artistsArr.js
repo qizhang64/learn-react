@@ -16,7 +16,7 @@ export default function List() {
       <button onClick={() => {
         setArtists([
             ...artists,
-            {id: nextId++, name: name}
+            {id: nextId++, name: name} // create a new array with id and name
         ]);
       }}>Add</button>
       <ul>
