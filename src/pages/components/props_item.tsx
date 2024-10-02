@@ -1,6 +1,6 @@
 import { ItemProps } from "@/types/item";
 
-function Item({ name, isPacked }: ItemProps) {
+function Item({ name, isPacked }: ItemProps) { // checkbox for packing things
   if (isPacked) {
     return <li className="item">{name} ✔</li>;
   }

@@ -1,4 +1,4 @@
-export interface AvatarProps {
-    person: {name: string, imageId: string}, 
+export interface AvatarProps { // 2 prop types
+    person: {name: string, imageId: string},
     size?: number
 }

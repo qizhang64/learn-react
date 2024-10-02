@@ -8,7 +8,7 @@ export default function PersonData() {
 
     function handleClick() {
         let name = fName + ' ' + lName;
-        setPerson({fullName: name, age: age});
+        setPerson({fullName: name, age: age}); // update one entity when clicked
     }
 
     return(
