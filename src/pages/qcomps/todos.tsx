@@ -10,12 +10,13 @@ const person = {
 };
 
 export default function TodoList() {
+  const imageUrl = `${baseUrl}${person.imageId}${person.imageSize}.jpg`;
   return (
     <div style={person.theme}>
       <h1>Person Name's Todos</h1>
       <img className="avatar"
-      src="baseURL + imageID + imageSize + .jpg"
-      alt="Person's Name"
+      src={`${baseUrl}${person.imageId}${person.imageSize}.jpg`}
+      alt={person.name}
       />
     </div>
   );
