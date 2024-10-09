@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ItemListProps } from '../../types/arrObj';
 
 let nextId = 3;
-const initialList = [
+const initialList = [ // copy has the references to original. When one changed, original changed, then another changed
   { id: 0, title: 'Big Bellies', seen: false },
   { id: 1, title: 'Lunar Landscape', seen: false },
   { id: 2, title: 'Terracotta Army', seen: true },
@@ -15,9 +15,9 @@ export default function BucketList() {
   );
 
   function handleToggleMyList(artworkId: number, nextSeen: boolean) {
-    const tmpList = myList.map(e => {
+    const tmpList = myList.map(e => { // map returns a shallow copy, so 2 lists change at same time
         if (e.id === artworkId) {
-            e.seen = nextSeen
+            return {...e, seen: nextSeen} // make a copy and make update
         }
         return e
     });
@@ -27,7 +27,7 @@ export default function BucketList() {
   function handleToggleYourList(artworkId: number, nextSeen: boolean) {
     const tmpList = yourList.map(e => {
         if (e.id === artworkId) {
-            e.seen = nextSeen
+          return {...e, seen: nextSeen}
         }
         return e
     });

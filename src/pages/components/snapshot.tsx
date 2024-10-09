@@ -6,7 +6,7 @@ export default function Counter() {
   return (
     <>
       <h1>{number}</h1>
-      <button onClick={() => {
+      <button onClick={() => { // only increase 1
         setNumber(number + 1);
         setNumber(number + 1);
         setNumber(number + 1);
@@ -14,3 +14,5 @@ export default function Counter() {
     </>
   )
 }
+
+// see +3 in queueUpdates.tsx

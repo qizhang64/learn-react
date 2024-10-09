@@ -10,8 +10,19 @@ export default function Form() {
     }
   });
 
-  function handleCityChange(e: { target: { value: string; }; }) {
-    const nextArtwork = { ...person.artwork, city: e.target.value };
+  function handleCityChange(e: { target: { value: string; }; }) { // construct a new object to replace the old one
+    // incorrect way:
+    // person.artwork.city = e.target.value;
+    // setPerson(person);
+    /**
+    const nextArtwork = {
+      title: e.person.title,
+      artwork: e.person.artwork,
+      image: e.person.image,
+      city: e.target.value
+    }
+     */
+    const nextArtwork = { ...person.artwork, city: e.target.value }; // first make a copy: everything is the same except city is changed
     const nextPerson = { ...person, artwork: nextArtwork };
     setPerson(nextPerson);
   }
@@ -23,8 +34,8 @@ export default function Form() {
       <label>
         City:
         <input
-          value={person.artwork.city}
-          onChange={handleCityChange}
+          value={person.artwork.city} // get input from user
+          onChange={handleCityChange} // read new info from user
         />
       </label>
       <p>
